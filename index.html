@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Inknut+Antiqua:wght@300&family=Italianno&family=Noto+Sans:wght@700&family=Open+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+
+
+    <!-- HAMBURGER CSS -->
+    <link href="styles/hamburger.css" rel="stylesheet">
+
+    <!-- DATA AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <title>Sogno Italiano</title>
+  </head>
+  <body>
+    <header>
+        <div id="navbar">
+          <!-- HAMBURGER BUTTON -->
+          <div id="burger-menu">
+            <button id="hamburger" class="hamburger hamburger--slider" type="button" onclick="closeNavigatio()">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+
+          <div id=overlay>
+            <nav>
+              <ul>
+                <li><a class="nav-links" href="/">Home</a></li>
+                <li><a class="nav-links" href="https://sogno-italiano.resos.com/booking" target="_blank">Reservation</a></li>
+                <li><a class="nav-links" href="#menu-wrapper">Menu</a></li>
+                <li><a class="nav-links" href="#">Order Online</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- SOGNO LOGO -->
+          <!-- <div id="logo-container">
+            <img id="header-logo" src="/images/logo.jpg" alt="">
+          </div> -->
+          <a href="/"><h1 id="brand-logo">Sogno <span>Italiano</span></h1></a>
+          
+          <div id="order-now">
+            <a href="#welcome-container">Order Online</a>
+          </div>
+        </div>
+    </header>
+
+    
+    <main>
+      <!-- LANDING SECTION -->
+      <section data-aos="fade-down" data-aos-offset="200" data-aos-delay="50" data-aos-easing="ease-in-out">
+        <div id="hero-container" class="container-lg">
+          <div id="hero-slogan">
+            <h1>Vieni a sentire l'atmosfera</h1>
+
+            <div id="hero-button-container">
+              <a target="_blank" href="https://sogno-italiano.resos.com/booking" class="hero-button">Make a Reservation</a>
+            </div>
+          </div>
+          <img id="hero-image" class="" src="/images/hero.jpeg" alt="PHOTO">
+      </div>
+      </section>
+
+
+      <!-- WELCOME SECTION -->
+      <section>
+        <div id="welcome-container">
+          <h1 id="welcome-heading">Our Story</h1>
+
+          <div id="welcome-content">
+            <table id="welcome-info-table">
+              <tbody>
+                <tr>
+                  <td class="table-heading">PHONE</td>
+                  <td>(07) 4433 1334</td>
+                </tr>
+
+                <tr>
+                  <td class="table-heading">ADDRESS</td>
+                  <td><span>2247 Gold Coast Hwy, Nobby Beach 4218</span><a id="view-map" href="">VIEW MAP</a></td>
+                </tr>
+
+                <tr>
+                  <td class="table-heading">ORDER</td>
+                  <td class="order-buttons-container">
+                    <a class="order-button" target="_blank" href="https://www.ubereats.com/au/store/sogno-italiano/w3I9XdGfQiStAiCSL1cVvg">UBER EATS
+                      <span>
+                        <img class="platform-icon-uber" src="https://img.icons8.com/material-outlined/24/000000/uber-eats.png"/>
+                      </span>
+                    </a>
+                    <a class="order-button" href="">DOORDASH
+                      <span><img class="platform-icon-doordash" src="https://img.icons8.com/ios/24/000000/doordash.png"/></span>
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="table-heading">HOURS</td>
+                  <td>DINNER Tuesday – Sunday
+                    5pm – Late</td>
+                </tr>
+              </tbody>
+            </table>
+            
+
+            <div id="about-container">
+              <div class="container pb-2">
+                <p>Our local, casual and intimate Nobbys trattoria brings authentic share plates, wood fired pizza, handmade pasta with Italian wine and flair to Nobby Beach on the Gold Coast.
+
+                  The ‘baby brother’ to Gemelli in Broadbeach, Gemellini was established in 2016 to bring a fresh Italian approach to the southern end of the Gold Coast.
+                  
+                  Gemellini is focused on creating the authentic Italian feast experience with our menu designed for sharing and enjoying together with family and friends. Start with one of our rustic antipasti dishes of salumi & buffalo mozzarella then move onto our fresh pasta or woodfired pizza menu all cooked in our imported woodfired oven from Italy.
+                  
+                </p>
+              </div>
+
+              <div id="about-image">
+                <img src="./images/chef.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- MENU SECTION -->
+      <section data-aos="fade" data-aos-offset="200" data-aos-delay="100" data-aos-easing="ease-in-out">
+        <div id="menu-wrapper">
+          <h1 id="menu-header">Menu</h1>
+
+          <div class="container">
+            <div id="menu-card">
+              <div id="menu-card-category">
+                <h4 id="entree">ENTREE/ANTIPASTO</h4>
+                <h4 id="gnocchi">GNOCCHI & RISOTTO</h4>
+                <h4 id="main">MAIN</h4>
+                <h4 id="pasta">PASTA</h4>
+                <h4 id="salumi">SALUMI & FORMAGGI</h4>
+                <h4 id="sides">SIDES</h4>
+                <h4 id="salad">SALADS</h4>
+                <h4 id="kids">KIDS MENU</h4>
+                <h4 id="desserts">Desserts</h4>
+              </div>
+              <div id="menu-card-items">
+                  <h2 id="menu-item-heading">ENTREE/ANTIPASTO</h2>
+
+                  <h4 id="menu-item-title">Gnocchi Formaggi (V)<span>$10</span></h4> 
+                  
+                  <p id="menu-item-desc">Homemade gnocchi, Grogonzola, Fotina, Parmesan</p>
+              </div>
+              <div id="menu-card-photo"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="uk-container uk-container-xlarge">
+          <div id="gallery-container">
+            <h1>Gallery</h1>
+            <!-- ELFSIGHT WIDGET -->
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-d2ce0bf9-93cb-4190-8aa5-9d1421b3ebd6"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div id="footer-container" class="container">
+          <div id="media-icons">
+            <div class="icon-container">
+              <a href="" class="uk-icon-link" uk-icon="icon: instagram; ratio: 2"></a>
+            </div>
+            <div class="icon-container">
+              <a href="" class="uk-icon-link" uk-icon="icon: facebook; ratio: 2"></a>
+            </div>
+            <div class="icon-container">
+              <a href="" class="uk-icon-link" uk-icon="icon: yelp; ratio: 2"></a>
+            </div>
+          </div>
+          <p>&copy;Copyright 2022 Sogno Italiano</p>
+        </div>
+      </footer>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+    
+    <!-- ELFSIGHT WIDGET :TODO -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
+
+    <!-- DATA AOS SCRIPT -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="javascript/menu.js"></script>
+    <script src="javascript/navbar.js"></script>
+  </body>
+</html>

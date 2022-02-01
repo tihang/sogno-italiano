@@ -1,0 +1,496 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: top 0.3s;
+  display: flex;
+  flex-direction: row;
+  padding: 18px 0;
+  margin: 0 0;
+  justify-content: space-between;
+  background-color: white;
+}
+#navbar #burger-menu {
+  flex: 1;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+#navbar #burger-menu button {
+  outline: none;
+}
+#navbar #burger-menu .hamburger {
+  outline: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+}
+#navbar #burger-menu .hamburger .hamburger-inner,
+#navbar #burger-menu .hamburger .hamburger-inner::before,
+#navbar #burger-menu .hamburger .hamburger-inner::after {
+  background-color: black;
+}
+#navbar #overlay {
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  z-index: 99;
+}
+#navbar #overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+#navbar #overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+#navbar #overlay.open li:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+#navbar #overlay.open li:nth-of-type(3) {
+  animation-delay: 0.45s;
+}
+#navbar #overlay.open li:nth-of-type(4) {
+  animation-delay: 0.5s;
+}
+#navbar #overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-family: "Varela Round", serif;
+  font-weight: 400;
+  text-align: center;
+}
+#navbar #overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+#navbar #overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+#navbar #overlay ul li a {
+  display: block;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  overflow: hidden;
+}
+#navbar #overlay ul li a:hover:after, #navbar #overlay ul li a:focus:after, #navbar #overlay ul li a:active:after {
+  width: 100%;
+}
+#navbar #overlay ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: gold;
+  transition: 0.35s;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+#navbar #header-logo {
+  align-self: center;
+  height: 120px;
+  width: auto;
+  cursor: pointer;
+}
+#navbar a {
+  color: black;
+}
+#navbar a:hover {
+  color: black;
+}
+#navbar #brand-logo {
+  display: inline-block;
+  align-self: center;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 2.1rem;
+  padding-top: 10px;
+}
+#navbar #brand-logo span {
+  font-size: 1.1rem;
+}
+#navbar #order-now {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+#navbar #order-now a {
+  padding: 8px 16px;
+  background-color: gold;
+  border: none;
+  margin: 4px 12px;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  outline: none;
+  color: black;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+}
+#navbar #order-now a:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 479px) {
+  #navbar {
+    justify-content: space-around;
+  }
+  #navbar #burger-menu {
+    flex: 0;
+  }
+  #navbar #brand-logo {
+    align-self: flex-start;
+    justify-self: flex-start;
+    flex: 1;
+    flex-grow: 4;
+    text-align: center;
+  }
+  #navbar #order-now {
+    display: none;
+  }
+}
+#hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  align-self: center;
+}
+#hero-slogan h1 {
+  font-family: "Comforter", cursive;
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+}
+#hero-slogan #hero-button-container {
+  display: flex;
+  align-self: center;
+}
+#hero-slogan #hero-button-container .hero-button {
+  padding: 8px 16px;
+  background-color: gold;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+}
+#hero-slogan #hero-button-container .hero-button:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+#hero-image {
+  height: 99vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+#welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+#welcome-container #welcome-heading {
+  display: inline-block;
+  align-self: center;
+  color: #990033;
+  font-size: 4rem;
+  padding-top: 48px;
+  font-family: "Italianno", cursive;
+}
+#welcome-container #welcome-content {
+  display: flex;
+  flex-direction: row;
+}
+#welcome-container #welcome-content #welcome-info-table {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+#welcome-container #welcome-content #welcome-info-table td {
+  border-bottom: 1px solid burlywood;
+  padding: 22px 16px;
+}
+#welcome-container #welcome-content #welcome-info-table span {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+#welcome-container #welcome-content #welcome-info-table .table-heading {
+  font-weight: 600;
+}
+#welcome-container #welcome-content #welcome-info-table #order-button-container {
+  display: flex;
+}
+#welcome-container #welcome-content #welcome-info-table .order-button {
+  display: block;
+  padding: 8px 16px;
+  background-color: gold;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+}
+#welcome-container #welcome-content #welcome-info-table .order-button:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+#welcome-container #welcome-content #welcome-info-table .order-button:nth-child(1) {
+  margin-bottom: 14px;
+}
+#welcome-container #welcome-content #welcome-info-table #view-map {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: gold;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+}
+#welcome-container #welcome-content #welcome-info-table #view-map:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+#welcome-container #welcome-content #about-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 4;
+  margin-left: 44px;
+}
+#welcome-container #welcome-content #about-container p {
+  font-family: "Inknut Antiqua", serif;
+  line-height: 220%;
+}
+#welcome-container #welcome-content #about-container #about-image {
+  align-self: flex-end;
+}
+
+@media (max-width: 960px) {
+  #welcome-container #welcome-content {
+    flex-direction: column;
+  }
+  #welcome-container #welcome-content #welcome-info-table {
+    align-self: center;
+  }
+  #welcome-container #welcome-content #about-container {
+    margin: 64px 0;
+  }
+  #welcome-container #welcome-content #about-container #about-image {
+    align-self: center;
+  }
+}
+#menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 44px auto;
+}
+#menu-wrapper #menu-header {
+  color: #990033;
+  font-size: 4rem;
+  padding-top: 48px;
+  font-family: "Italianno", cursive;
+}
+#menu-wrapper #menu-card {
+  display: flex;
+  padding: 16px 0;
+  justify-content: flex-start;
+}
+#menu-wrapper #menu-card #menu-card-category {
+  display: flex;
+  flex-direction: column;
+  border-right: burlywood 2px solid;
+  padding: 42px 34px;
+}
+#menu-wrapper #menu-card #menu-card-category h4 {
+  cursor: pointer;
+}
+#menu-wrapper #menu-card #menu-card-category h4:hover {
+  color: burlywood;
+}
+#menu-wrapper #menu-card #menu-card-category .active {
+  display: inline-block;
+  border-bottom: 2px solid burlywood;
+  padding-bottom: 4px;
+}
+#menu-wrapper #menu-card #menu-card-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 22px;
+  padding: 42px 34px;
+}
+#menu-wrapper #menu-card #menu-card-items #menu-item-heading {
+  display: inline-block;
+  border-bottom: 2px solid burlywood;
+  font-weight: 400;
+  margin-top: 0;
+}
+#menu-wrapper #menu-card #menu-card-items #menu-item-title {
+  color: #666633;
+  padding-top: 30px;
+  margin-top: 0;
+}
+#menu-wrapper #menu-card #menu-card-items #menu-item-title span {
+  color: darkgrey;
+  padding-left: 78px;
+  font-size: 1rem;
+  float: right;
+  position: static;
+}
+#menu-wrapper #menu-card #menu-card-items #menu-item-desc {
+  color: darkgrey;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  #menu-wrapper #menu-card {
+    flex-direction: column;
+  }
+  #menu-wrapper #menu-card #menu-card-category {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    align-items: center;
+    padding: 0 0;
+  }
+  #menu-wrapper #menu-card #menu-card-category h4 {
+    font-size: 1rem;
+    display: inline-block;
+    margin: 22px 40px;
+    margin-top: 0;
+    border: 1px solid burlywood;
+    padding: 8px;
+    border-radius: 8px;
+  }
+}
+
+#gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 95%;
+}
+#gallery-container h1 {
+  color: #990033;
+  font-size: 4rem;
+  padding-top: 48px;
+  font-family: "Italianno", cursive;
+}
+#gallery-container #ig-post-container {
+  display: flex;
+  flex-direction: row;
+}
+
+footer {
+  display: flex;
+  background-color: black;
+  height: 350px;
+  padding: 30px;
+}
+footer #footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer #footer-container p {
+  display: inline-block;
+  color: white;
+}
+footer #footer-container .icon-container {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.enable-scroll {
+  overflow: auto;
+  height: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  height: 56px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/*# sourceMappingURL=main.css.map */

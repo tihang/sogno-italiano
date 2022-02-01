@@ -1,0 +1,236 @@
+{
+    "Entree/Antipasto": [
+        {
+            "name": "Bruschetta Classica (V)",
+            "price": 12,
+            "description": "Toasted bread topped with marinated tomatoes, basil, olive oil and rocotta."
+        },
+        {
+            "name": "Arancini Fungi (V)",
+            "price": 16,
+            "description": "Hand rolled arborio rice provolone cheese and mushroom ball served with truffle aioli"
+        },
+        {
+            "name": "Frittura di mare",
+            "price": 19,
+            "description": "Fried mix seafoods cornflour served with rocket salad"
+        },
+        {
+            "name": "Olive Mix (V)",
+            "price": 8,
+            "description": "House marinated variety of Italian olives served with house made fresh bread"
+        },
+        {
+            "name": "Focacci",
+            "price": 10,
+            "description": "House made bread served with anchovies and confit garlic"
+        },
+        {
+            "name": "Garlic Prawns",
+            "price": 17,
+            "description": "Pan fried Prawns with extra virgin olive oil garlic, chilli & parsley served with house made focaccia"
+        }
+    ],
+    "Salumi & Formaggi": [
+        {
+            "name": "Prosciutto 100g",
+            "price": 10,
+            "description": ""
+        },
+        {
+            "name": "Mild Salami 100g",
+            "price": 7,
+            "description": ""
+        },
+        {
+            "name": "Hot Salami",
+            "price": 7,
+            "description": ""
+        },
+        {
+            "name": "Gorgonzola 100g",
+            "price": 8,
+            "description": ""
+        },
+        {
+            "name": "Burrata",
+            "price": 10,
+            "description": ""
+        },
+        {
+            "name": "Parmesan",
+            "price": 8,
+            "description": ""
+        },
+        {
+            "name": "Asiago 100g",
+            "price": 8,
+            "description": ""
+        },
+        {
+            "name": "Grilled veggies zucchini and eggplant",
+            "price": 6,
+            "description": ""
+        }
+    ],
+    "Kids Menu": [
+        {
+            "name": "Cotoletta",
+            "price": 10,
+            "description": "Chicken schnitzel with chips"
+        },
+        {
+            "name": "Fish and chips",
+            "price": 10,
+            "description": "Battered fish served with chips"
+        },
+        {
+            "name": "Bolognese",
+            "price": 12,
+            "description": "Spaghetti with Bolognese sauce"
+        },
+        {
+            "name": "Burro",
+            "price": 9,
+            "description": "Spaghetti butter and parmesan"
+        }
+    ],
+    "Sides": [
+        {
+            "name": "Chips",
+            "price": 7,
+            "description": ""
+        },
+        {
+            "name": "Green seasonal vegetables",
+            "price": 10,
+            "description": ""
+        },
+        {
+            "name": "Mashed potatoes",
+            "price": 7,
+            "description": ""
+        }
+    ],
+    "Gnocchi & Risotto": [
+        {
+            "name": "Gnocchi Formaggi (V)",
+            "price": 24,
+            "description": "Homemade gnocchi, Gorgonzola, Fontina, Parmesan"
+        },
+        {
+            "name": "Gnocchi Pesto (V)",
+            "price": 24,
+            "description": "Homemade gnocchi with cherry tomato basil pesto, parmesan"
+        },
+        {
+            "name": "Risotto Marinara",
+            "price": 26,
+            "description": "Fish, calamari, prawns, cherry tomatoes, chilli lemon, and parsley"
+        }
+    ],
+    "Salad": [
+        {
+            "name": "Panzanella Con Burrata",
+            "price": 18,
+            "description": "Burrata, basil, tomatoes, onion, croutons, olive oil, and vinegar dressing"
+        },
+        {
+            "name": "Insalata Di Cesare",
+            "price": 16,
+            "description": "Baby gem cos lettus, croutons, anchovies, crispy pancetta, saved parmesan with Caesar dressing"
+        },
+        {
+            "name": "Rocket and shaved Parmesan",
+            "price": 14,
+            "description": "Rocket, shaved parmesan, walnut, pears oregano, olive oil and balsamic vinegar"
+        }
+    ],
+    "Pastas": [
+        {
+            "name": "Spaghetti Carbonara",
+            "price": 24,
+            "description": "Pancetta, pecorino, cracked pepper, egg yolk"
+        },
+        {
+            "name": "Spaghetti Napoli (V)",
+            "price": 20,
+            "description": "Cherry tomatoes, basil, Napoli sauce"
+        },
+        {
+            "name": "Add burrata",
+            "price": 6,
+            "description": ""
+        },
+        {
+            "name": "Spaghetti Pescatore (Olive oil/ tomato base)",
+            "price": 26,
+            "description": "Fish, calamari, mussels, prawns, cherry tomatoes, white wine, basil, and parsley"
+        },
+        {
+            "name": "Rigatoni Amatriciana",
+            "price": 24,
+            "description": "Pancetta, cherry tomatoes, onion, chilli, Napoli sauce, Pecorino Romano"
+        },
+        {
+            "name": "Rigatoni Boscaiola",
+            "price": 24,
+            "description": "Chicken, mushroom, touch of cream, basil pesto, parmesan"
+        },
+        {
+            "name": "Pappardelle Ragu",
+            "price": 24,
+            "description": "7-hours slow cooked ossobuco with ribs with white wine, Parmesan"
+        },
+        {
+            "name": "Spaghetti con broccoli Gamberi",
+            "price": 24,
+            "description": "Broccoli, cherry tomatoes, chilli, prawns"
+        },
+        {
+            "name": "Spaghetti Bolognese",
+            "price": 24,
+            "description": "Slow cooked pork and beef mince crushed tomato"
+        }
+
+    ],
+    "Mains": [
+        {
+            "name": "Straccetti di vitello",
+            "price": 32,
+            "description": "Milk fed veal with creamy mushroom or pizzaiola served with seasonal vegetables and herb crushed potato"
+        },
+        {
+            "name": "Cotoletta",
+            "price": "28 / 26",
+            "description": "Freshly crumbed vewl or chicken served with seasonal vegetables and mashed potatoes"
+        },
+        {
+            "name": "Pesce Bara (GF)",
+            "price": 32,
+            "description": "Crispy skin Barramundi served with seasonal vegetables and herb crushed potato"
+        }
+    ],
+    "Desserts": [
+        {
+            "name": "Tiramisu",
+            "price": 12,
+            "description": "Savoiardi biscuits, espresso coffee, amaretto liqueur, mascarpone"
+        },
+        {
+            "name": "Honeycomb parfait",
+            "price": 12,
+            "description": "Semi frozen parfait, honeycomb served with mixed berries coulis"
+        },
+        {
+            "name": "Panna cotta",
+            "price": 12,
+            "description": "Served with mixed berries coulis"
+        },
+        {
+            "name": "Gelati",
+            "price": 6,
+            "description": "Vanilla, Chocolate, VG Chocolate, Lemon"
+        }
+    ]
+}
