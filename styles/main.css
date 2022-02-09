@@ -311,6 +311,9 @@ html {
   background-color: black;
   color: white;
 }
+#welcome-container #welcome-content #welcome-info-table .hours {
+  display: block;
+}
 #welcome-container #welcome-content #about-container {
   display: flex;
   flex-direction: column;
