@@ -21,9 +21,9 @@
             "description": "House marinated variety of Italian olives served with house made fresh bread"
         },
         {
-            "name": "Focacci",
-            "price": 10,
-            "description": "House made bread served with anchovies and confit garlic"
+            "name": "Garlic Bread",
+            "price": 12,
+            "description": "Toasted bread with garlic, butter, and parsley"
         },
         {
             "name": "Garlic Prawns",
@@ -110,6 +110,11 @@
             "name": "Mashed potatoes",
             "price": 7,
             "description": ""
+        },
+        {
+            "name": "Truffle oil",
+            "price": 3,
+            "description": ""
         }
     ],
     "Gnocchi & Risotto": [
@@ -144,6 +149,11 @@
             "name": "Rocket and shaved Parmesan",
             "price": 14,
             "description": "Rocket, shaved parmesan, walnut, pears oregano, olive oil and balsamic vinegar"
+        },
+        {
+            "name": "Add Chicken or Prawn",
+            "price": 8,
+            "description": "ALL SALADS CAN BE SERVED WITH CHICKEN OR PRAWNS ADD "
         }
     ],
     "Pastas": [
@@ -202,8 +212,13 @@
         },
         {
             "name": "Cotoletta",
-            "price": "28 / 26",
+            "price": "30 / 28",
             "description": "Freshly crumbed vewl or chicken served with seasonal vegetables and mashed potatoes"
+        },
+        {
+            "name": "",
+            "price": "+8",
+            "description": "Make it parmigiana add prosciutto, Napoli sauce and buffalo mozzarella"
         },
         {
             "name": "Pesce Bara (GF)",
