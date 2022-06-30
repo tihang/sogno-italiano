@@ -283,6 +283,7 @@ html {
   #welcome-content {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
     #welcome-info-table {
       display: flex;
@@ -362,10 +363,7 @@ html {
         font-family: "Inknut Antiqua", serif;
         line-height: 220%;
       }
-
-      #about-image {
-        align-self: flex-end;
-      }
+      
     }
   }
 }

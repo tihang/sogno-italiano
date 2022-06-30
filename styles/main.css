@@ -88,7 +88,7 @@ html {
 #navbar #overlay ul li {
   display: block;
   height: 25%;
-  height: calc(100% / 4);
+  height: 25%;
   min-height: 50px;
   position: relative;
   opacity: 0;
@@ -253,6 +253,7 @@ html {
 #welcome-container #welcome-content {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 #welcome-container #welcome-content #welcome-info-table {
   display: flex;
@@ -323,9 +324,6 @@ html {
 #welcome-container #welcome-content #about-container p {
   font-family: "Inknut Antiqua", serif;
   line-height: 220%;
-}
-#welcome-container #welcome-content #about-container #about-image {
-  align-self: flex-end;
 }
 
 @media (max-width: 960px) {

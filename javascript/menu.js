@@ -1,23 +1,40 @@
-// Initial menu load and remove IG GALLERY AD
+
+var menu;
+
+http://18.138.249.129/api/menu-items
+
 $(document).ready(function(){
-    const category = "Entree/Antipasto"
+  const category = "Entree/Antipasto"
 
-    $.getJSON("menu.json", function(data) {
-    const arr = data[category]
+  $.get("http://18.138.249.129/api/menu-items", function(data) {
+  menu = data.data;
+  console.log(menu)
 
-    $("#menu-card-items").empty()
-    $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
-    arr.forEach(item => {
-        $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-        $("#menu-card-items").append(`<p id="menu-item-desc">${item.description}</p>`)
-    })
+  $("#menu-card-items").empty()
+  $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
+
+  const arr = menu.filter(item => item.attributes.category == category)
+  arr.forEach(item => {
+      $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+      $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
   })
-
-  // remove IG GALLERY AD
-  setTimeout(()=> {
-    $(".eapps-link").remove();
-  }, 1000)
 })
+})
+
+// $(document).ready(function(){
+//     const category = "Entree/Antipasto"
+
+//     $.getJSON("menu.json", function(data) {
+//     const arr = data[category]
+
+//     $("#menu-card-items").empty()
+//     $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
+//     arr.forEach(item => {
+//         $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>${item.price}<span></h4>`)
+//         $("#menu-card-items").append(`<p id="menu-item-desc">${item.description}</p>`)
+//     })
+//   })
+// })
 
 
 // ONCLICK MENU CHANGE
@@ -26,16 +43,14 @@ $("#entree").click(function(){
     $(document).ready(function(){
         const category = "Entree/Antipasto"
 
-        $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+        const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<p id="menu-item-desc">${item.description}</p>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
 
@@ -44,15 +59,13 @@ $("#salumi").click(function(){
     $(document).ready(function(){
         const category = "Salumi & Formaggi"
 
-        $.getJSON("menu.json", function(data) {
-          const arr = data[category]
-
-          $("#menu-card-items").empty()
-          $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
-          arr.forEach(item => {
-              $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-              $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
-          })
+        const arr = menu.filter(item => item.attributes.category == category)
+        
+        $("#menu-card-items").empty()
+        $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
+        arr.forEach(item => {
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            // $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
       })
 })
@@ -61,16 +74,14 @@ $("#gnocchi").click(function(){
   $(document).ready(function(){
       const category = "Gnocchi & Risotto"
 
-      $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+      const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
 
@@ -78,16 +89,14 @@ $("#main").click(function(){
   $(document).ready(function(){
       const category = "Mains"
 
-      $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+      const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
 
@@ -96,16 +105,14 @@ $("#salad").click(function(){
   $(document).ready(function(){
       const category = "Salad"
 
-      $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+      const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
 
@@ -113,16 +120,14 @@ $("#pasta").click(function(){
   $(document).ready(function(){
       const category = "Pastas"
 
-      $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+      const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
 
@@ -131,16 +136,14 @@ $("#sides").click(function(){
   $(document).ready(function(){
       const category = "Sides"
 
-      $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+      const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            //$("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
 
@@ -148,16 +151,14 @@ $("#kids").click(function(){
   $(document).ready(function(){
       const category = "Kids Menu"
 
-      $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+      const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
 
@@ -166,15 +167,13 @@ $("#desserts").click(function(){
   $(document).ready(function(){
       const category = "Desserts"
 
-      $.getJSON("menu.json", function(data) {
-        const arr = data[category]
-
+      const arr = menu.filter(item => item.attributes.category == category)
+        
         $("#menu-card-items").empty()
         $("#menu-card-items").append(`<h2 id="menu-item-heading">${category}</h2>`)
         arr.forEach(item => {
-            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.name}<span>$${item.price}<span></h4>`)
-            $("#menu-card-items").append(`<h5 id="menu-item-desc">${item.description}</h5>`)
+            $("#menu-card-items").append(`<h4 id="menu-item-title">${item.attributes.name}<span>${item.attributes.price}<span></h4>`)
+            $("#menu-card-items").append(`<p id="menu-item-desc">${item.attributes.description}</p>`)
         })
-      })
     })
 })
