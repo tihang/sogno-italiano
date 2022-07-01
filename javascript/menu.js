@@ -1,12 +1,11 @@
 
 var menu;
 
-http://18.138.249.129/api/menu-items
 
 $(document).ready(function(){
   const category = "Entree/Antipasto"
 
-  $.get("http://18.138.249.129/api/menu-items", function(data) {
+  $.get("https://api.sognoitaliano.com.au/api/menu-items", function(data) {
   menu = data.data;
   console.log(menu)
 
